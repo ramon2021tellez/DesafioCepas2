@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Enologist Magazines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enologist_magazines.each do |enologist_magazine| %>
+      <tr>
+        <td><%= link_to 'Show', enologist_magazine %></td>
+        <td><%= link_to 'Edit', edit_enologist_magazine_path(enologist_magazine) %></td>
+        <td><%= link_to 'Destroy', enologist_magazine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Enologist Magazine', new_enologist_magazine_path %>
